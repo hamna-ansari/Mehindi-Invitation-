@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#58266f">
+  <title>Ali & Hamna · Mehndi</title>
+  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="composition.css?v=8">
+</head>
+<body>
+  <header class="floating-controls">
+    <nav class="language-pill" aria-label="Language">
+      <button data-language="en" aria-pressed="true">English</button>
+      <button data-language="ur" aria-pressed="false" lang="ur">اردو</button>
+    </nav>
+    <button id="music-toggle" class="music-toggle" aria-pressed="false"><span aria-hidden="true">♫</span><span data-text="musicOff">Our song</span></button>
+  </header>
+  <audio id="background-music" src="celebration.mp3" preload="metadata" loop></audio>
+  <div id="cover" class="cover">
+    <div class="cover-inner">
+      <p class="eyebrow" data-text="invited">YOU’RE INVITED</p>
+      <h2 data-text="openingTitle">Let the celebrations begin.</h2>
+      <button id="open" class="drum-stage" aria-label="Open invitation with music">
+        <span class="drum-halo" aria-hidden="true"></span>
+        <span class="drummer-sprite" aria-hidden="true"></span>
+        <span class="beat-notes" aria-hidden="true">♪ ♫ ♪</span>
+        <span class="open-label" data-text="open">Tap to play the dhol</span>
+      </button>
+      <button id="skip" class="text-button" data-text="skip">Open without music</button>
+    </div>
+  </div>
+  <main id="invitation" inert>
+    <section class="invitation-card" aria-label="Mehndi invitation">
+      <img src="mehndi-background.png" class="card-art" alt="" width="1152" height="2048" fetchpriority="high">
+      <div class="card-copy">
+        <p class="invitation-line" data-text="invitationLine">You are invited to celebrate with us</p>
+        <h1><span data-text="groom">Ali Sufian</span><small data-text="and">&</small><span data-text="bride">Hamna Ansari</span></h1>
+        <p class="event-title" data-text="mehndiEvent">Mehndi Celebration</p>
+        <p class="event-date" data-text="date">25 September 2026</p>
+      </div>
+      <a class="scroll-cue" href="#timings" aria-label="Scroll to event timings">↓</a>
+    </section>
+    <section id="timings" class="timings section" aria-labelledby="timings-title">
+      <div class="evening-canopy">
+        <img class="decor garland-decor" src="umbrella-garlands-transparent.png" width="1536" height="1024" alt="" loading="lazy">
+        <div class="canopy-copy"><p class="eyebrow" data-text="theEvening">THE EVENING</p><h2 id="timings-title" data-text="timings">A night to remember</h2></div>
+      </div>
+      <ol class="time-row">
+        <li><img class="arch-card" src="timing-hand-welcome.png" alt="6:30 PM — Welcome" loading="lazy"><span class="timing-accessible"><strong data-text="sixThirty">6:30 PM</strong><span data-text="welcome">Welcome</span></span></li>
+        <li><img class="arch-card" src="timing-hand-mehndi-7pm.png" alt="7 PM — Mehndi" loading="lazy"><span class="timing-accessible"><strong data-text="seven">7 PM</strong><span data-text="mehndi">Mehndi</span></span></li>
+        <li><img class="arch-card" src="timing-hand-dinner.png" alt="9 PM — Dinner" loading="lazy"><span class="timing-accessible"><strong data-text="nine">9 PM</strong><span data-text="dinner">Dinner</span></span></li>
+      </ol>
+
+    </section>
+    <section class="contacts section" aria-labelledby="contacts-title">
+      <div class="location-heading"><img class="location-icon-png" src="gramophone-transparent.png" alt="" width="640" height="575"><p class="eyebrow" data-text="withLove">WITH LOVE</p><h2 id="contacts-title" data-text="family">Find us & get in touch</h2></div>
+      <div class="venue-line"><p data-text="venue">Iqbal Marquee</p><address data-text="address">6F2H+64X Water Works, Road, Qila Kuhna Qasim Bagh, Multan, Pakistan</address><a id="venue-link" class="glass-button" target="_blank" rel="noopener noreferrer" data-text="directions">Get directions ↗</a></div>
+      <a class="contact" href="tel:+923197831338"><span><strong data-text="ajaz">Ajaz Ansari</strong><bdi>+92 319 7831338</bdi></span><span class="call-icon" aria-hidden="true">↗</span></a>
+      <a class="contact" href="tel:+923226646764"><span><strong data-text="abdullah">Dr. Abdullah Muhammad</strong><bdi>+92 322 6646764</bdi></span><span class="call-icon" aria-hidden="true">↗</span></a>
+      <footer><div class="closing-note"><img class="decor camera-decor" src="camera-transparent.png" alt="" loading="lazy"><p data-text="closing">We can’t wait to see you.</p></div><button id="replay" class="text-button" data-text="replay">Play the welcome again</button></footer>
+    </section>
+  </main>
+  <noscript><p>Please enable JavaScript for the invitation, language selector, and animations.</p></noscript>
+  <script src="script.js?v=5"></script>
+</body>
+</html>
