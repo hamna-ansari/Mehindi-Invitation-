@@ -1,13 +1,80 @@
-F<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#58266f">
-  <title>Ali & Hamna · Mehndi</title>
+  <title>Hamna & Ali · Mehndi</title>
   <link rel="stylesheet" href="styles.css?v=7">
   <link rel="stylesheet" href="composition.css?v=8">
+
+  <style>
+    /* Only styling for the names + parent details */
+    .card-copy h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      line-height: 1.05;
+    }
+
+    .card-copy h1 span {
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: clamp(2.2rem, 7vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .card-copy h1 small {
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: clamp(1.5rem, 4vw, 2.3rem);
+      font-weight: 400;
+      line-height: 1;
+      margin: 4px 0;
+    }
+
+    .card-copy h1 span::after {
+      display: block;
+      content: "";
+      font-family: Georgia, serif;
+      font-size: clamp(0.65rem, 1.8vw, 0.9rem);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      margin-top: 6px;
+      opacity: 0.9;
+    }
+
+    .card-copy h1 span:first-child::after {
+      content: "D/O Mr. & Mrs. Khalid Ansari (Late)";
+    }
+
+    .card-copy h1 span:last-child::after {
+      content: "S/O Mr. & Mrs. Ahmed Nawaz";
+    }
+
+    .card-copy h1 span::after {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .card-copy h1 span {
+        font-size: 2.25rem;
+      }
+
+      .card-copy h1 small {
+        font-size: 1.45rem;
+        margin: 5px 0;
+      }
+
+      .card-copy h1 span::after {
+        font-size: 0.62rem;
+        margin-top: 5px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="floating-controls">
     <nav class="language-pill" aria-label="Language">
@@ -16,7 +83,9 @@ F<!DOCTYPE html>
     </nav>
     <button id="music-toggle" class="music-toggle" aria-pressed="false"><span aria-hidden="true">♫</span><span data-text="musicOff">Our song</span></button>
   </header>
+
   <audio id="background-music" src="celebration.mp3" preload="metadata" loop></audio>
+
   <div id="cover" class="cover">
     <div class="cover-inner">
       <p class="eyebrow" data-text="invited">YOU’RE INVITED</p>
@@ -30,38 +99,107 @@ F<!DOCTYPE html>
       <button id="skip" class="text-button" data-text="skip">Open without music</button>
     </div>
   </div>
+
   <main id="invitation" inert>
     <section class="invitation-card" aria-label="Mehndi invitation">
       <img src="mehndi-background.png" class="card-art" alt="" width="1152" height="2048" fetchpriority="high">
+
       <div class="card-copy">
         <p class="invitation-line" data-text="invitationLine">You are invited to celebrate with us</p>
-        <h1><span data-text="groom">Ali Sufian</span><small data-text="and">&</small><span data-text="bride">Hamna Ansari</span></h1>
+
+        <h1>
+          <span data-text="bride">Hamna Ansari</span>
+          <small data-text="and">&</small>
+          <span data-text="groom">Ali Sufian</span>
+        </h1>
+
         <p class="event-title" data-text="mehndiEvent">Mehndi Celebration</p>
         <p class="event-date" data-text="date">25 September 2026</p>
       </div>
+
       <a class="scroll-cue" href="#timings" aria-label="Scroll to event timings">↓</a>
     </section>
+
     <section id="timings" class="timings section" aria-labelledby="timings-title">
       <div class="evening-canopy">
         <img class="decor garland-decor" src="umbrella-garlands-transparent.png" width="1536" height="1024" alt="" loading="lazy">
-        <div class="canopy-copy"><p class="eyebrow" data-text="theEvening">THE EVENING</p><h2 id="timings-title" data-text="timings">A night to remember</h2></div>
+        <div class="canopy-copy">
+          <p class="eyebrow" data-text="theEvening">THE EVENING</p>
+          <h2 id="timings-title" data-text="timings">A night to remember</h2>
+        </div>
       </div>
-      <ol class="time-row">
-        <li><img class="arch-card" src="timing-hand-welcome.png" alt="6:30 PM — Welcome" loading="lazy"><span class="timing-accessible"><strong data-text="sixThirty">6:30 PM</strong><span data-text="welcome">Welcome</span></span></li>
-        <li><img class="arch-card" src="timing-hand-mehndi-7pm.png" alt="7 PM — Mehndi" loading="lazy"><span class="timing-accessible"><strong data-text="seven">7 PM</strong><span data-text="mehndi">Mehndi</span></span></li>
-        <li><img class="arch-card" src="timing-hand-dinner.png" alt="9 PM — Dinner" loading="lazy"><span class="timing-accessible"><strong data-text="nine">9 PM</strong><span data-text="dinner">Dinner</span></span></li>
-      </ol>
 
+      <ol class="time-row">
+        <li>
+          <img class="arch-card" src="timing-hand-welcome.png" alt="6:30 PM — Welcome" loading="lazy">
+          <span class="timing-accessible">
+            <strong data-text="sixThirty">6:30 PM</strong>
+            <span data-text="welcome">Welcome</span>
+          </span>
+        </li>
+
+        <li>
+          <img class="arch-card" src="timing-hand-mehndi-7pm.png" alt="7 PM — Mehndi" loading="lazy">
+          <span class="timing-accessible">
+            <strong data-text="seven">7 PM</strong>
+            <span data-text="mehndi">Mehndi</span>
+          </span>
+        </li>
+
+        <li>
+          <img class="arch-card" src="timing-hand-dinner.png" alt="9 PM — Dinner" loading="lazy">
+          <span class="timing-accessible">
+            <strong data-text="nine">9 PM</strong>
+            <span data-text="dinner">Dinner</span>
+          </span>
+        </li>
+      </ol>
     </section>
+
     <section class="contacts section" aria-labelledby="contacts-title">
-      <div class="location-heading"><img class="location-icon-png" src="gramophone-transparent.png" alt="" width="640" height="575"><p class="eyebrow" data-text="withLove">WITH LOVE</p><h2 id="contacts-title" data-text="family">Find us & get in touch</h2></div>
-      <div class="venue-line"><p data-text="venue">Iqbal Marquee</p><address data-text="address">6F2H+64X Water Works, Road, Qila Kuhna Qasim Bagh, Multan, Pakistan</address><a id="venue-link" class="glass-button" target="_blank" rel="noopener noreferrer" data-text="directions">Get directions ↗</a></div>
-      <a class="contact" href="tel:+923197831338"><span><strong data-text="ajaz">Ajaz Ansari</strong><bdi>+92 319 7831338</bdi></span><span class="call-icon" aria-hidden="true">↗</span></a>
-      <a class="contact" href="tel:+923346050941"><span><strong data-text="faraz">Faraz Ansari</strong><bdi>+92 334 6050941</bdi></span><span class="call-icon" aria-hidden="true">↗</span></a>
-      <footer><div class="closing-note"><img class="decor camera-decor" src="camera-transparent.png" alt="" loading="lazy"><p data-text="closing">We can’t wait to see you.</p></div><button id="replay" class="text-button" data-text="replay">Play the welcome again</button></footer>
+      <div class="location-heading">
+        <img class="location-icon-png" src="gramophone-transparent.png" alt="" width="640" height="575">
+        <p class="eyebrow" data-text="withLove">WITH LOVE</p>
+        <h2 id="contacts-title" data-text="family">Find us & get in touch</h2>
+      </div>
+
+      <div class="venue-line">
+        <p data-text="venue">Iqbal Marquee</p>
+        <address data-text="address">6F2H+64X Water Works, Road, Qila Kuhna Qasim Bagh, Multan, Pakistan</address>
+        <a id="venue-link" class="glass-button" target="_blank" rel="noopener noreferrer" data-text="directions">Get directions ↗</a>
+      </div>
+
+      <a class="contact" href="tel:+923197831338">
+        <span>
+          <strong data-text="ajaz">Ajaz Ansari</strong>
+          <bdi>+92 319 7831338</bdi>
+        </span>
+        <span class="call-icon" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="contact" href="tel:+923346050941">
+        <span>
+          <strong data-text="faraz">Faraz Ansari</strong>
+          <bdi>+92 334 6050941</bdi>
+        </span>
+        <span class="call-icon" aria-hidden="true">↗</span>
+      </a>
+
+      <footer>
+        <div class="closing-note">
+          <img class="decor camera-decor" src="camera-transparent.png" alt="" loading="lazy">
+          <p data-text="closing">We can’t wait to see you.</p>
+        </div>
+        <button id="replay" class="text-button" data-text="replay">Play the welcome again</button>
+      </footer>
     </section>
   </main>
-  <noscript><p>Please enable JavaScript for the invitation, language selector, and animations.</p></noscript>
+
+  <noscript>
+    <p>Please enable JavaScript for the invitation, language selector, and animations.</p>
+  </noscript>
+
   <script src="script.js?v=5"></script>
 </body>
 </html>
+
