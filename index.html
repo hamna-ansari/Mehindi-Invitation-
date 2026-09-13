@@ -10,230 +10,33 @@
   <link rel="stylesheet" href="composition.css?v=8">
 
   <style>
-    /* =========================================
-       INVITATION NAMES — PREMIUM LAYOUT
-       ========================================= */
-
+    /* Name / invitation card placed inside the white area */
     .card-copy {
       width: 100%;
-      max-width: 100%;
       box-sizing: border-box;
       overflow: hidden;
     }
 
-    /*
-      Keep the complete name section inside
-      the central white area of the invitation.
-    */
-    .card-copy h1 {
-      width: 74%;
-      max-width: 410px;
-      margin: 16px auto 14px;
-      padding: 0;
-
-      box-sizing: border-box;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-      line-height: 1;
-
-      gap: 0;
-    }
-
-    /* =========================================
-       BRIDE + GROOM NAMES
-       ========================================= */
-
-    .card-copy h1 span {
+    .names-card {
       display: block;
-
-      width: 100%;
-      max-width: 100%;
-
-      font-family:
-        "Brush Script MT",
-        "Segoe Script",
-        "Snell Roundhand",
-        cursive;
-
-      font-size: clamp(1.95rem, 5.4vw, 3.35rem);
-      font-weight: 500;
-
-      line-height: 0.95;
-
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: clip;
-
-      margin: 0;
-      padding: 0;
-
-      color: inherit;
+      width: 68%;
+      max-width: 390px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
     }
-
-    /* =========================================
-       PARENT DETAILS
-       ========================================= */
-
-    .card-copy h1 span::after {
-      display: block;
-
-      width: 100%;
-
-      margin-top: 8px;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size: clamp(0.55rem, 1.55vw, 0.76rem);
-      font-style: normal;
-      font-weight: 400;
-
-      line-height: 1.3;
-
-      letter-spacing: 0.015em;
-
-      white-space: normal;
-      text-align: center;
-
-      opacity: 0.9;
-    }
-
-    .card-copy h1 span:first-child::after {
-      content: "D/O Mr. & Mrs. Khalid Ansari (Late)";
-    }
-
-    .card-copy h1 span:last-child::after {
-      content: "S/O Mr. & Mrs. Ahmed Nawaz";
-    }
-
-    /* =========================================
-       AMPERSAND
-       ========================================= */
-
-    .card-copy h1 small {
-      display: block;
-
-      margin: 8px 0 9px;
-
-      font-family:
-        "Brush Script MT",
-        "Segoe Script",
-        "Snell Roundhand",
-        cursive;
-
-      font-size: clamp(1.25rem, 3.5vw, 1.9rem);
-
-      font-weight: 400;
-
-      line-height: 0.8;
-
-      text-align: center;
-    }
-
-    /* =========================================
-       EVENT TEXT SPACING
-       ========================================= */
-
-    .card-copy .event-title {
-      margin-top: 11px;
-    }
-
-    .card-copy .event-date {
-      margin-top: 6px;
-    }
-
-    /* =========================================
-       TABLET
-       ========================================= */
-
-    @media (max-width: 700px) {
-
-      .card-copy h1 {
-        width: 72%;
-        max-width: 370px;
-      }
-
-      .card-copy h1 span {
-        font-size: clamp(1.9rem, 6vw, 3rem);
-      }
-
-      .card-copy h1 span::after {
-        font-size: clamp(0.54rem, 1.8vw, 0.72rem);
-      }
-    }
-
-    /* =========================================
-       MOBILE
-       ========================================= */
 
     @media (max-width: 600px) {
-
-      .card-copy h1 {
-        width: 72%;
+      .names-card {
+        width: 70%;
         max-width: 325px;
-
-        margin-top: 13px;
-        margin-bottom: 12px;
-      }
-
-      .card-copy h1 span {
-        font-size: clamp(1.75rem, 8vw, 2.65rem);
-        line-height: 0.95;
-      }
-
-      .card-copy h1 span::after {
-        margin-top: 7px;
-
-        font-size: clamp(0.5rem, 2.25vw, 0.66rem);
-
-        line-height: 1.2;
-      }
-
-      .card-copy h1 small {
-        margin: 7px 0 8px;
-
-        font-size: clamp(1.2rem, 4.8vw, 1.6rem);
-      }
-
-      .card-copy .event-title {
-        margin-top: 9px;
-      }
-
-      .card-copy .event-date {
-        margin-top: 5px;
       }
     }
 
-    /* =========================================
-       VERY SMALL PHONES
-       ========================================= */
-
     @media (max-width: 390px) {
-
-      .card-copy h1 {
-        width: 70%;
+      .names-card {
+        width: 68%;
         max-width: 285px;
-      }
-
-      .card-copy h1 span {
-        font-size: 1.75rem;
-      }
-
-      .card-copy h1 span::after {
-        font-size: 0.52rem;
-        margin-top: 6px;
-      }
-
-      .card-copy h1 small {
-        font-size: 1.25rem;
-        margin: 6px 0 7px;
       }
     }
   </style>
@@ -245,30 +48,18 @@
 
     <nav class="language-pill" aria-label="Language">
       <button data-language="en" aria-pressed="true">English</button>
-
-      <button
-        data-language="ur"
-        aria-pressed="false"
-        lang="ur">
-        اردو
-      </button>
+      <button data-language="ur" aria-pressed="false" lang="ur">اردو</button>
     </nav>
 
     <button
       id="music-toggle"
       class="music-toggle"
       aria-pressed="false">
-
       <span aria-hidden="true">♫</span>
-
-      <span data-text="musicOff">
-        Our song
-      </span>
-
+      <span data-text="musicOff">Our song</span>
     </button>
 
   </header>
-
 
   <audio
     id="background-music"
@@ -278,17 +69,13 @@
   </audio>
 
 
-  <!-- =========================================
-       COVER / OPENING SCREEN
-       ========================================= -->
+  <!-- COVER -->
 
   <div id="cover" class="cover">
 
     <div class="cover-inner">
 
-      <p
-        class="eyebrow"
-        data-text="invited">
+      <p class="eyebrow" data-text="invited">
         YOU’RE INVITED
       </p>
 
@@ -337,16 +124,9 @@
   </div>
 
 
-  <!-- =========================================
-       MAIN INVITATION
-       ========================================= -->
+  <!-- INVITATION -->
 
   <main id="invitation" inert>
-
-
-    <!-- =======================================
-         MAIN INVITATION CARD
-         ======================================= -->
 
     <section
       class="invitation-card"
@@ -360,51 +140,16 @@
         height="2048"
         fetchpriority="high">
 
-
       <div class="card-copy">
 
-        <p
-          class="invitation-line"
-          data-text="invitationLine">
-          You are invited to celebrate with us
-        </p>
-
-
-        <!-- ===================================
-             NAMES
-             =================================== -->
-
-        <h1>
-
-          <span data-text="bride">
-            Hamna Ansari
-          </span>
-
-          <small data-text="and">
-            &
-          </small>
-
-          <span data-text="groom">
-            Ali Sufian
-          </span>
-
-        </h1>
-
-
-        <p
-          class="event-title"
-          data-text="mehndiEvent">
-          Mehndi Celebration
-        </p>
-
-        <p
-          class="event-date"
-          data-text="date">
-          25 September 2026
-        </p>
+        <!-- COMPLETE CARD IMAGE -->
+        <img
+          src="names-card.png"
+          class="names-card"
+          alt="Hamna Ansari and Ali Sufian"
+          loading="eager">
 
       </div>
-
 
       <a
         class="scroll-cue"
@@ -416,9 +161,7 @@
     </section>
 
 
-    <!-- =======================================
-         EVENT TIMINGS
-         ======================================= -->
+    <!-- TIMINGS -->
 
     <section
       id="timings"
@@ -453,11 +196,9 @@
 
       </div>
 
-
       <ol class="time-row">
 
         <li>
-
           <img
             class="arch-card"
             src="timing-hand-welcome.png"
@@ -465,22 +206,16 @@
             loading="lazy">
 
           <span class="timing-accessible">
-
             <strong data-text="sixThirty">
               6:30 PM
             </strong>
-
             <span data-text="welcome">
               Welcome
             </span>
-
           </span>
-
         </li>
 
-
         <li>
-
           <img
             class="arch-card"
             src="timing-hand-mehndi-7pm.png"
@@ -488,22 +223,16 @@
             loading="lazy">
 
           <span class="timing-accessible">
-
             <strong data-text="seven">
               7 PM
             </strong>
-
             <span data-text="mehndi">
               Mehndi
             </span>
-
           </span>
-
         </li>
 
-
         <li>
-
           <img
             class="arch-card"
             src="timing-hand-dinner.png"
@@ -511,17 +240,13 @@
             loading="lazy">
 
           <span class="timing-accessible">
-
             <strong data-text="nine">
               9 PM
             </strong>
-
             <span data-text="dinner">
               Dinner
             </span>
-
           </span>
-
         </li>
 
       </ol>
@@ -529,14 +254,11 @@
     </section>
 
 
-    <!-- =======================================
-         CONTACT / LOCATION
-         ======================================= -->
+    <!-- CONTACTS -->
 
     <section
       class="contacts section"
       aria-labelledby="contacts-title">
-
 
       <div class="location-heading">
 
@@ -561,7 +283,6 @@
 
       </div>
 
-
       <div class="venue-line">
 
         <p data-text="venue">
@@ -583,13 +304,11 @@
 
       </div>
 
-
       <a
         class="contact"
         href="tel:+923197831338">
 
         <span>
-
           <strong data-text="ajaz">
             Ajaz Ansari
           </strong>
@@ -597,7 +316,6 @@
           <bdi>
             +92 319 7831338
           </bdi>
-
         </span>
 
         <span
@@ -608,13 +326,11 @@
 
       </a>
 
-
       <a
         class="contact"
         href="tel:+923346050941">
 
         <span>
-
           <strong data-text="faraz">
             Faraz Ansari
           </strong>
@@ -622,7 +338,6 @@
           <bdi>
             +92 334 6050941
           </bdi>
-
         </span>
 
         <span
@@ -632,7 +347,6 @@
         </span>
 
       </a>
-
 
       <footer>
 
@@ -649,7 +363,6 @@
           </p>
 
         </div>
-
 
         <button
           id="replay"
@@ -671,7 +384,6 @@
       language selector, and animations.
     </p>
   </noscript>
-
 
   <script src="script.js?v=5"></script>
 
