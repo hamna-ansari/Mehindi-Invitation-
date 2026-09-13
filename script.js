@@ -17,7 +17,7 @@ const translations = {
     welcome: 'Welcome', nikkah: 'Nikkah', mehndi: 'Mehndi', dinner: 'Dinner', timingNote: '6 PM & 10 PM details to follow · Pakistan time',
     directions: 'Get directions ↗', counting: 'COUNTING THE MOMENTS', countdownTitle: 'Until our forever begins',
     days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds', celebrate: 'Our celebration has begun!', calendar: 'Save the date',
-    withLove: 'WITH LOVE', family: 'Find us & get in touch', ajaz: 'Ajaz Ansari', faraz: 'Faraz Ansari',
+withLove: 'WITH LOVE',family: 'Find us & get in touch',abdullah: 'Dr. Muhammad Abdullah',jawad: 'Mr. Jawad Hassan',  
     closing: 'We can’t wait to see you.', replay: 'Play the welcome again', countdownLabel: 'Time until Nikkah', scrollLabel: 'Scroll to event timings'
   },
   ur: {
@@ -32,7 +32,7 @@ const translations = {
     welcome: 'استقبال', nikkah: 'نکاح', mehndi: 'مہندی', dinner: 'عشائیہ', timingNote: '۶ اور ۱۰ بجے کی تفصیل جلد · پاکستان کا مقامی وقت',
     directions: 'راستہ دیکھیں ↗', counting: 'خوشیوں کا انتظار', countdownTitle: 'ہماری نئی زندگی کے آغاز تک',
     days: 'دن', hours: 'گھنٹے', minutes: 'منٹ', seconds: 'سیکنڈ', celebrate: 'ہماری خوشیوں کی شام شروع ہو گئی!', calendar: 'کیلنڈر میں محفوظ کریں',
-    withLove: 'محبت کے ساتھ', family: 'مقام اور رابطہ', ajaz: 'اعجاز انصاری', faraz: 'ڈاکٹر عبداللہ محمد',
+    withLove: 'محبت کے ساتھ',family: 'مقام اور رابطہ',abdullah: 'ڈاکٹر محمد عبداللہ',jawad: 'مسٹر جواد حسن',
     closing: 'آپ کی آمد کے منتظر', replay: 'استقبال دوبارہ دیکھیں', countdownLabel: 'نکاح شروع ہونے میں باقی وقت', scrollLabel: 'تقریب کے اوقات دیکھیں'
   }
 };
